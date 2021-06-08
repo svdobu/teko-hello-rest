@@ -57,6 +57,7 @@ public class CustomerController {
     @ExceptionHandler(CustomerNotFoundException.class)
     public void handleCustomerNotFound(CustomerNotFoundException exception, HttpServletResponse response) throws IOException{
         response.sendError( HttpStatus.NOT_FOUND.value(), exception.getMessage() );
+
     }
 
 
